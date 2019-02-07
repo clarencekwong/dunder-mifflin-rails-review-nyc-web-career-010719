@@ -1,0 +1,9 @@
+
+
+<ul>
+<% @employees.each do |employee| %>
+  <li><%= link_to employee.to_s, employee %></li>
+  <li><%= employee.title %></li>
+  <li><img height='42' src='<%= employee.img_url %>'></li>
+<% end %>
+</ul>

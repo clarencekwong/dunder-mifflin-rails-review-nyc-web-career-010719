@@ -1,0 +1,17 @@
+<h1>All the dogs!</h1>
+
+<%= form_tag(dogs_path, method: "get") do %>
+  <label>Sort by: </label>
+  <select name="sort_by">
+    <option value="1">greatest to least</option>
+    <option value="2">least to greatest</option>
+  </select>
+  <%= submit_tag("Submit") %>
+<% end %>
+
+<ul>
+
+  <% @dogs.each do |dog| %>
+    <li><%= link_to dog.name, dog %> | <%= dog.num_of_employees %></li>
+  <% end %>
+</ul>

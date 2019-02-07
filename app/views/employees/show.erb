@@ -1,0 +1,10 @@
+
+
+<h1><%= @employee.to_s %></h1>
+<img height='400' src='<%= @employee.img_url %>'><br>
+<ul>
+<li>Alias: <%= @employee.alias %></li>
+<li>Title: <%= @employee.title %></li>
+<li>Office: <%= @employee.office %></li>
+<li>Dog: <%= link_to @employee.dog_name, dog_path(@employee.dog) %></li>
+</ul>
